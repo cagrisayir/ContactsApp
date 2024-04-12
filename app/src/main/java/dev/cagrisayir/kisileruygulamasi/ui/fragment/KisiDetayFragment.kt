@@ -34,14 +34,16 @@ class KisiDetayFragment : Fragment() {
         binding.kisiTelText.setText(gelenKisi.kisi_tel)
 
         binding.buttonGuncelle.setOnClickListener {
-            kaydet(kisi_id = gelenKisi.kisi_id, kisi_ad = gelenKisi.kisi_ad, kisi_tel = gelenKisi.kisi_tel)
+            val kisi_ad = binding.kisiAdText.text.toString()
+            val kisi_tel = binding.kisiTelText.text.toString()
+            guncelle(kisi_id = gelenKisi.kisi_id, kisi_ad = kisi_ad, kisi_tel = kisi_tel)
             hideTheKeyboard(it)
         }
 
         return binding.root
     }
 
-    private fun kaydet(kisi_id: Int, kisi_ad: String, kisi_tel: String) {
+    private fun guncelle(kisi_id: Int, kisi_ad: String, kisi_tel: String) {
         Log.e("Kisi Guncellendi", "$kisi_ad - $kisi_tel")
         Toast.makeText(context, "Kisi Guncellendi: $kisi_id: $kisi_ad", Toast.LENGTH_LONG).show()
     }
