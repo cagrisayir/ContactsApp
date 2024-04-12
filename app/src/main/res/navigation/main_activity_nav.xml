@@ -26,5 +26,9 @@
         android:id="@+id/kisiDetayFragment"
         android:name="dev.cagrisayir.kisileruygulamasi.ui.fragment.KisiDetayFragment"
         android:label="fragment_kisi_detay"
-        tools:layout="@layout/fragment_kisi_detay" />
+        tools:layout="@layout/fragment_kisi_detay" >
+        <argument
+            android:name="kisi"
+            app:argType="dev.cagrisayir.kisileruygulamasi.data.entity.Kisiler" />
+    </fragment>
 </navigation>

@@ -18,6 +18,7 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbarKisiDetay">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kisi_ad_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Kisi Ad" />
@@ -35,6 +36,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/kisi_tel_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Kisi Telefon" />
