@@ -40,6 +40,10 @@ class KisiDetayFragment : Fragment() {
             hideTheKeyboard(it)
         }
 
+        binding.geributton.setOnClickListener {
+            activity?.onBackPressedDispatcher?.onBackPressed()
+        }
+
         return binding.root
     }
 

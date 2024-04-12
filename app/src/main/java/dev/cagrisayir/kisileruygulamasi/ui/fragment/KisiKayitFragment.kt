@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import dev.cagrisayir.kisileruygulamasi.R
 import dev.cagrisayir.kisileruygulamasi.databinding.FragmentKisiKayitBinding
 
 class KisiKayitFragment : Fragment() {
@@ -22,6 +23,7 @@ class KisiKayitFragment : Fragment() {
         binding = FragmentKisiKayitBinding.inflate(inflater, container, false)
 
         binding.toolbarKisiKayit.title = "Kisi Kayit"
+        binding.toolbarKisiKayit.setTitleTextColor(getResources().getColor(R.color.white))
 
         binding.buttonKaydet.setOnClickListener {
             val kisi_ad = binding.editTextKisiAd.text.toString()
@@ -31,6 +33,9 @@ class KisiKayitFragment : Fragment() {
             hideTheKeyboard(it)
         }
 
+        binding.geriButton.setOnClickListener {
+            activity?.onBackPressedDispatcher?.onBackPressed()
+        }
         return binding.root
     }
 
